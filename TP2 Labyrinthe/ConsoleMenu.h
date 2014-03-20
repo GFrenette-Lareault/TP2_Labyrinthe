@@ -11,7 +11,7 @@ public:
 	~ConsoleMenu();
 
 private:
-	char readValidInput(int _tabValidInput, int _nbElements);
+	char readValidInput(char _tabValidInput[], int _nbElements);
 	void displayMenu();
 	bool manageChoice(char _input);
 };
