@@ -77,6 +77,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleMenu.cpp" />
+    <ClCompile Include="Labyrinth.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="Square.cpp" />
+    <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleMenu.h" />

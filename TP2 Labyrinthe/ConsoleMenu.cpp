@@ -20,6 +20,7 @@ char ConsoleMenu::readValidInput(int _tabValidInput, int _nbElements)
 void ConsoleMenu::displayMenu()
 {
 
+<<<<<<< HEAD
 }
 
 bool ConsoleMenu::manageChoice(char _input)
@@ -30,4 +31,6 @@ bool ConsoleMenu::manageChoice(char _input)
 ConsoleMenu::~ConsoleMenu()
 {
 
+=======
+>>>>>>> 8488e1bd5a877481ac14150074ae783d0a9631a5
 }
