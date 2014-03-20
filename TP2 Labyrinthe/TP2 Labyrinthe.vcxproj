@@ -77,6 +77,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleMenu.cpp" />
+    <ClCompile Include="Labyrinth.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="Square.cpp" />
+    <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
