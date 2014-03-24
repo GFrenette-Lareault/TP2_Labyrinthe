@@ -7,7 +7,6 @@ class ConsoleMenu
 {
 public:
 	void Run();
-
 	ConsoleMenu();
 	~ConsoleMenu();
 
