@@ -48,4 +48,15 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ressources\exemple2.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="Ressources\exemple3.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="Ressources\exemple1.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

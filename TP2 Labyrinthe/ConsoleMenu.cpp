@@ -1,4 +1,6 @@
+#include <iostream>
 #include "ConsoleMenu.h"
+#include "Labyrinth.h"
 
 ConsoleMenu::ConsoleMenu()
 {
@@ -7,7 +9,6 @@ ConsoleMenu::ConsoleMenu()
 
 void ConsoleMenu::Run()
 {
-	cout << "Entrez «V» pour visualiser le Labyrinthe, «S» pour solutionner le Labyrinthe ou «Q» pour quitter : ";
 	char input;
 	char tabValidInputs[] = {'V', 'v', 'S', 's', 'Q', 'q'};
 	const int NB_ELEMENTS = 6;
@@ -26,11 +27,14 @@ char ConsoleMenu::readValidInput(char _tabValidInput[], int _nbElements)
 
 void ConsoleMenu::displayMenu()
 {
-
+	cout << "Entrez «V» pour visualiser le Labyrinthe, «S» pour solutionner le Labyrinthe ou «Q» pour quitter : ";
 }
 
 bool ConsoleMenu::manageChoice(char _input)
 {
+	Labyrinth lab("exemple1.txt");
+	cout << "Done" << endl;
+	system("pause");
 	return true;
 }
 
