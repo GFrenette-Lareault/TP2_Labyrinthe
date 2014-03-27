@@ -11,27 +11,31 @@ Labyrinth::Labyrinth(string _fileName)
 		for(int j = 0; j < 20; j++)
 		{
 			tabSquare[i][j] = new Square(j, i, str[j]);
+			if (tabSquare[i][j]->value == 'D')
+			{
+				startSquare = tabSquare[i][j];
+			}
 		}
-		cout << str.length() << endl;
 	}
-	for(int i = 0; i < 20; i++)
-	{
-		for (int j = 0; j < 20; j++)
-		{
-			cout << tabSquare[i][j]->value;
-		}
-		cout << endl;
-	}
+
 }
 
 Labyrinth::~Labyrinth()
 {
-
 }
 
 string Labyrinth::ToString()
 {
-	return "A string representation of the Labyrinth.";
+	string str = "";
+	for(int i = 0; i < 20; i++)
+	{
+		for (int j = 0; j < 20; j++)
+		{
+			str += tabSquare[i][j]->value;
+		}
+		str += "\n";
+	}
+	return str;
 }
 
 Square* Labyrinth::GetStartSquare()

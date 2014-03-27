@@ -34,6 +34,7 @@ bool ConsoleMenu::manageChoice(char _input)
 {
 	Labyrinth lab("exemple1.txt");
 	cout << "Done" << endl;
+	cout << lab.ToString();
 	system("pause");
 	return true;
 }
