@@ -2,6 +2,7 @@
 #include "ConsoleMenu.h"
 #include "Labyrinth.h"
 
+
 ConsoleMenu::ConsoleMenu()
 {
 
@@ -62,6 +63,7 @@ bool ConsoleMenu::manageChoice(char _input)
 		}
 		case 'S':
 		case 's':
+			stc.Push(new Square(1,2,'a'));
 			return true;
 		case 'Q':
 		case 'q':

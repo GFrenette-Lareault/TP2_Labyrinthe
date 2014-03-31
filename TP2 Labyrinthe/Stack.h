@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "Square.h"
 
 using namespace std;
@@ -22,5 +23,5 @@ private:
 		Cell* next;
 	};
 
-	Cell* first();
+	Cell* first;
 };

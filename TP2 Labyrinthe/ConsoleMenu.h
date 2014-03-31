@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-
+#include "Stack.h"
+#include "Square.h"
 using namespace std;
 
 class ConsoleMenu
@@ -14,4 +15,5 @@ private:
 	char readValidInput(char _tabValidInput[], int _nbElements);
 	void displayMenu();
 	bool manageChoice(char _input);
+	Stack stc;
 };
