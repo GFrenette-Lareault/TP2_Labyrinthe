@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include "Stack.h"
-#include "Square.h"
+#include "Labyrinth.h"
+
 using namespace std;
 
 class ConsoleMenu
