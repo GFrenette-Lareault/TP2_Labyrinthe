@@ -41,5 +41,5 @@ bool ConsoleMenu::manageChoice(char _input)
 
 ConsoleMenu::~ConsoleMenu()
 {
-
+	//TODO: Release the memory.
 }
