@@ -1,3 +1,5 @@
+#pragma once
+
 struct Square 
 {
 	int x;
