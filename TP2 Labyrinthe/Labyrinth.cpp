@@ -22,6 +22,7 @@ Labyrinth::Labyrinth(string _fileName)
 
 Labyrinth::~Labyrinth()
 {
+	//TODO: Release the memory.
 }
 
 string Labyrinth::ToString()
@@ -40,5 +41,5 @@ string Labyrinth::ToString()
 
 Square* Labyrinth::GetStartSquare()
 {
-	return NULL;
+	return startSquare;
 }
