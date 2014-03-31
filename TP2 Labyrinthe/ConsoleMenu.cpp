@@ -22,7 +22,24 @@ void ConsoleMenu::Run()
 
 char ConsoleMenu::readValidInput(char _tabValidInput[], int _nbElements)
 {
-	return 'a';
+	string inputStr;
+
+	for (;;)
+	{
+		displayMenu();
+		getline(cin, inputStr);
+
+		for (int i = 0; i < _nbElements; i++)
+		{
+			string element = "";
+			element.append(1, _tabValidInput[i]);
+			if (inputStr == element)
+			{
+				return _tabValidInput[i];
+			}
+		}
+		cout << "Veuillez entrer une donnée valide." << endl;
+	}
 }
 
 void ConsoleMenu::displayMenu()
@@ -32,11 +49,24 @@ void ConsoleMenu::displayMenu()
 
 bool ConsoleMenu::manageChoice(char _input)
 {
-	Labyrinth lab("exemple1.txt");
-	cout << "Done" << endl;
-	cout << lab.ToString();
-	system("pause");
-	return true;
+	switch (_input)
+	{
+		case 'V':
+		case 'v':
+		{
+			Labyrinth lab("exemple1.txt");
+			cout << "Done" << endl;
+			cout << lab.ToString();
+			system("pause");
+			return true;
+		}
+		case 'S':
+		case 's':
+			return true;
+		case 'Q':
+		case 'q':
+			return false;
+	}
 }
 
 ConsoleMenu::~ConsoleMenu()
