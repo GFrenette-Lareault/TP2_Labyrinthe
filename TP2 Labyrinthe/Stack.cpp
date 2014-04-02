@@ -13,7 +13,11 @@ Stack::Stack()
 
 Stack::~Stack()
 {
-
+	//TODO: Essentially, you'll have to pop until there is nothing left.
+	while(!isEmpty())
+	{
+		Pop();
+	}
 }
 
 bool Stack::isEmpty()
