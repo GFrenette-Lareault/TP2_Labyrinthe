@@ -2,6 +2,7 @@
 #include <string>
 #include "Stack.h"
 #include "Labyrinth.h"
+#include "Robot.h"
 
 using namespace std;
 
