@@ -61,5 +61,11 @@ Square* Stack::Top()
 
 string Stack::ToStringReverse()
 {
+	if(!isEmpty())
+	{
+		string current = "(" + to_string(Top()->x) + ", " + to_string(Top()->y) + ")\n";
+		Pop();
+		return ToStringReverse() + current;
+	}
 	return "";
 }

@@ -7,7 +7,7 @@ Robot::Robot()
 
 Robot::~Robot()
 {
-	
+	delete pathStartToExit;
 }
 
 void Robot::Explore(Labyrinth* _labyrinth)
@@ -18,7 +18,7 @@ void Robot::Explore(Labyrinth* _labyrinth)
 
 string Robot::getSolution()
 {
-	return "";
+	return pathStartToExit->ToStringReverse();
 }
 
 Square* Robot::findUnvisited(Square* fromSquare, Labyrinth* _labyrinth)
@@ -76,7 +76,4 @@ bool Robot::searchPath(Square* fromSquare, Labyrinth* _labyrinth)
 		pathStartToExit->Push(fromSquare);
 		return true;
 	}
-
-
-
 }

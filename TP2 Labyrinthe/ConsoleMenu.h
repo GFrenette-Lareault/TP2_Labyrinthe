@@ -10,8 +10,6 @@ class ConsoleMenu
 {
 public:
 	void Run();
-	ConsoleMenu();
-	~ConsoleMenu();
 
 private:
 	char readValidInput(char _tabValidInput[], int _nbElements);

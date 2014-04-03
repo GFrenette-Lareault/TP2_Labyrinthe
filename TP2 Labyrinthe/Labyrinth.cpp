@@ -39,8 +39,13 @@ Labyrinth::Labyrinth(string _fileName)
 
 Labyrinth::~Labyrinth()
 {
-	delete [] tabSquare;
-	delete startSquare;
+	for (int i = 0; i < 20; i++)
+	{
+		for (int j = 0; j < 20; j++)
+		{
+			delete tabSquare[i][j];
+		}
+	}
 }
 
 string Labyrinth::ToString()

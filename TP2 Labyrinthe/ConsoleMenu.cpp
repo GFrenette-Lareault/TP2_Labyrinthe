@@ -58,6 +58,8 @@ bool ConsoleMenu::manageChoice(char _input)
 		{
 			Robot rob;
 			rob.Explore(&lab);
+			cout << rob.getSolution();
+			system("pause");
 			return true;
 		}
 		case 'Q':
