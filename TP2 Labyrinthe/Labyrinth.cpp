@@ -11,6 +11,7 @@ Labyrinth::Labyrinth(string _fileName)
 		for(int j = 0; j < 20; j++)
 		{
 			tabSquare[i][j] = new Square(j, i, str[j]);
+			tabSquare[i][j]->visited = false;
 			if (tabSquare[i][j]->value == 'D')
 			{
 				startSquare = tabSquare[i][j];

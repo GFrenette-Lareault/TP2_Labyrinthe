@@ -15,4 +15,7 @@ public:
 private:
 	Stack* pathStartToExit;
 	Square* currentSquare;
+
+	Square* findUnvisited(Square* fromSquare, Labyrinth* _labyrinth);
+	bool searchPath(Square* fromSquare, Labyrinth* _labyrinth);
 };
