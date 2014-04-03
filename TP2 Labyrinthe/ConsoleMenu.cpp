@@ -1,11 +1,6 @@
 #include <iostream>
 #include "ConsoleMenu.h"
 
-ConsoleMenu::ConsoleMenu()
-{
-
-}
-
 void ConsoleMenu::Run()
 {
 	char input;
@@ -66,9 +61,4 @@ bool ConsoleMenu::manageChoice(char _input)
 		case 'q':
 			return false;
 	}
-}
-
-ConsoleMenu::~ConsoleMenu()
-{
-	//TODO: Release the memory.
 }

@@ -16,5 +16,4 @@ private:
 	char readValidInput(char _tabValidInput[], int _nbElements);
 	void displayMenu();
 	bool manageChoice(char _input);
-	Stack stc;
 };

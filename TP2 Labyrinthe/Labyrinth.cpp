@@ -22,7 +22,8 @@ Labyrinth::Labyrinth(string _fileName)
 
 Labyrinth::~Labyrinth()
 {
-	//TODO: Release the memory.
+	delete [] tabSquare;
+	delete startSquare;
 }
 
 string Labyrinth::ToString()
