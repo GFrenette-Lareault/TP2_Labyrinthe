@@ -17,7 +17,23 @@ Labyrinth::Labyrinth(string _fileName)
 			}
 		}
 	}
+	for (int i = 0; i < 19; i++)
+	{
+		for (int j = 0; j < 19; j++)
+		{
+			tabSquare[i][j]->lowerSquare = tabSquare[i+1][j];
+			tabSquare[i][j]->rightSquare = tabSquare[i][j+1];
 
+			tabSquare[i+1][j]->upperSquare = tabSquare[i][j];
+			tabSquare[i][j+1]->leftSquare = tabSquare[i][j];
+		}
+	}
+
+	tabSquare[19][18]->rightSquare = tabSquare[19][19];
+	tabSquare[18][19]->lowerSquare = tabSquare[19][19];
+
+	tabSquare[19][19]->leftSquare = tabSquare[19][18];
+	tabSquare[19][19]->upperSquare = tabSquare[18][19];
 }
 
 Labyrinth::~Labyrinth()
