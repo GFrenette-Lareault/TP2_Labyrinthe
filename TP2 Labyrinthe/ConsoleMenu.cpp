@@ -59,6 +59,7 @@ bool ConsoleMenu::manageChoice(char _input)
 			Robot rob;
 			rob.Explore(&lab);
 			cout << rob.getSolution();
+			//TODO: Bonus point: Parse the return and animate the solution on screen.
 			system("pause");
 			return true;
 		}
