@@ -2,7 +2,6 @@
 
 Labyrinth::Labyrinth(string _fileName)
 {
-	cout << "File reading start" << endl;
 	ifstream file("Ressources/" + _fileName);
 	string str;
 	for(int i = 0; i < 20; i++)
