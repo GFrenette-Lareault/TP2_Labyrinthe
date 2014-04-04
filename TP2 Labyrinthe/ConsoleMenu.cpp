@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "ConsoleMenu.h"
 
 using namespace System;
@@ -15,6 +16,44 @@ void ConsoleMenu::setPosition(int x, int y, int time)
       Console::Clear();
       Console::WriteLine(e->Message);
    }
+}
+
+void ConsoleMenu::parseAndShowSolution(string s)
+{
+	vector<pair<int, int>> coordinates;
+
+	int i = 0;
+	while (i < s.size())
+	{
+		while (i < s.size() && s[i] != '(')
+		{
+			i++;
+		}
+		if (s[i] == '(')
+		{
+			string tokenX = "";
+			string tokenY = "";
+			i++;
+			while (s[i] != ',')
+			{
+				tokenX += s[i];
+				i++;
+			}
+			i += 2;
+			while (s[i] != ')')
+			{
+				tokenY += s[i];
+				i++;
+			}
+			coordinates.push_back(pair<int, int> (atoi(tokenX.c_str()), atoi(tokenY.c_str())));
+			i++;
+		}
+	}
+
+	for (int i = 0; i < coordinates.size(); i++)
+	{
+		setPosition(coordinates[i].first, coordinates[i].second, 500);
+	}
 }
 
 void ConsoleMenu::Run()
@@ -59,7 +98,7 @@ void ConsoleMenu::displayMenu()
 
 bool ConsoleMenu::manageChoice(char _input)
 {
-	Labyrinth lab("exemple1.txt");
+	Labyrinth lab("exemple3.txt");
 	switch (_input)
 	{
 		case 'V':
@@ -79,14 +118,8 @@ bool ConsoleMenu::manageChoice(char _input)
 
 			cout << lab.ToString();
 
-			setPosition(1, 1, 500);
-
-			setPosition(2, 1, 500);
-
-			setPosition(0, 20, 500);
-
-			//cout << rob.getSolution();
-			//TODO: Bonus point: Parse the return and animate the solution on screen.
+			parseAndShowSolution(rob.getSolution());
+			setPosition(0, 20, 0);
 			system("pause");
 			return true;
 		}
