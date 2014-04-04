@@ -98,7 +98,7 @@ void ConsoleMenu::displayMenu()
 
 bool ConsoleMenu::manageChoice(char _input)
 {
-	Labyrinth lab("exemple3.txt");
+	Labyrinth lab("exemple1.txt");
 	switch (_input)
 	{
 		case 'V':
