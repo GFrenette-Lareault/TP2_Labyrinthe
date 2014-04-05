@@ -1,5 +1,18 @@
-#include "labyrinth.h"
+﻿#include "labyrinth.h"
 
+/** @file Labyrinth.cpp
+	Fichier responsable de contenir le labyrinth.
+
+	@author Jean-David Moisan
+	@author Gabriel Frenette-Lareault
+	@date 4 avril 2014
+	@version 1.0
+ */
+
+/**
+	Constructeur, prend en paramètre le nom du fichier labyrinth à ouvrir.
+	@param _filename Le nom du fichier texte labyrinth à ouvrir.
+*/
 Labyrinth::Labyrinth(string _fileName)
 {
 	ifstream file("Ressources/" + _fileName);
@@ -36,6 +49,9 @@ Labyrinth::Labyrinth(string _fileName)
 	tabSquare[19][19]->upperSquare = tabSquare[18][19];
 }
 
+/**
+	Simple déconstructeur de pointeur de tableau.
+*/
 Labyrinth::~Labyrinth()
 {
 	for (int i = 0; i < 20; i++)
@@ -47,6 +63,10 @@ Labyrinth::~Labyrinth()
 	}
 }
 
+/**
+	Permet de représenter le labyrinth.
+	@return Une repésentation textuelle du labyrinth.
+*/
 string Labyrinth::ToString()
 {
 	string str = "";
@@ -61,6 +81,10 @@ string Labyrinth::ToString()
 	return str;
 }
 
+/**
+	Méthode d'accessibilité.
+	@return La case de départ du labyrinth.
+*/
 Square* Labyrinth::GetStartSquare()
 {
 	return startSquare;

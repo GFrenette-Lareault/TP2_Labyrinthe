@@ -1,9 +1,18 @@
-#include <string>
+﻿#include <string>
 #include "Square.h"
 #include "Labyrinth.h"
 #include "Stack.h"
 
 using namespace std;
+
+/** @file Robot.h
+	Fichier contenant les entêtes de méthodes et procédures.
+
+	@date 4 avril 2014
+	@author Gabriel Frenette-Lareault
+	@author Jean-David Moisan
+	@version 1.0
+*/
 
 class Robot
 {

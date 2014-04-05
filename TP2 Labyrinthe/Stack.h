@@ -1,10 +1,19 @@
-#pragma once
+﻿#pragma once
 
 #include <string>
 #include <iostream>
 #include "Square.h"
 
 using namespace std;
+
+/** @file Stack.h
+	Fichier contenant les entêtes de méthodes et procédures.
+
+	@date 4 avril 2014
+	@author Gabriel Frenette-Lareault
+	@author Jean-David Moisan
+	@version 1.0
+*/
 
 class Stack
 {

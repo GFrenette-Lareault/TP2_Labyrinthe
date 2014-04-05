@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Square.h"
 #include <string>
@@ -6,6 +6,15 @@
 #include <iostream>
 
 using namespace std;
+
+/** @file Labyrinth.h
+	Fichier contenant les entêtes de méthodes et procédures.
+
+	@date 4 avril 2014
+	@author Gabriel Frenette-Lareault
+	@author Jean-David Moisan
+	@version 1.0
+*/
 
 class Labyrinth
 {

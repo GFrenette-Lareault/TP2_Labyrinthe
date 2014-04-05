@@ -1,9 +1,22 @@
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include "ConsoleMenu.h"
 
 using namespace System;
 
+/** @file ConsoleMenu.cpp
+	Fichier responsable de l'affichage, de l'interaction entre les menus et des entrées.
+
+	@data 4 avril 2014
+	@author Jean-David Moisan
+	@author Gabriel Frenette-Laureault
+	@version 1.0
+*/
+
+/**
+	Permet de placer le curseur à une certaine position sur la console.
+	Ensuite, pause pendant un certain nombre de milisecondes.
+*/
 void ConsoleMenu::setPosition(int x, int y, int time)
 {
    try
@@ -18,6 +31,10 @@ void ConsoleMenu::setPosition(int x, int y, int time)
    }
 }
 
+/**
+	Reçoit en entrée un string représentant des coordonnées.
+	Parse ces coordonnées et deplace le curseur d'après ces coordonnées.
+*/
 void ConsoleMenu::parseAndShowSolution(string s)
 {
 	vector<pair<int, int>> coordinates;
@@ -56,6 +73,9 @@ void ConsoleMenu::parseAndShowSolution(string s)
 	}
 }
 
+/**
+	Le coeur du programme. C'est ici que le programme est géré au niveau le plus haut.
+*/
 void ConsoleMenu::Run()
 {
 	char input;
@@ -69,6 +89,12 @@ void ConsoleMenu::Run()
 	while(manageChoice(input));
 }
 
+/** 
+	readValidInput permet de lire une entrée des entrées par l'utilisateur tant et aussi longtemps que l'entrée n'est pas valide.
+	@param _tabValidInputs Un tableau contenant les entrées valides.
+	@param nbElements Le nombre d'éléments dans le tableau.
+	@return Un charactère valide.
+*/
 char ConsoleMenu::readValidInput(char _tabValidInput[], int _nbElements)
 {
 	string inputStr;
@@ -87,15 +113,23 @@ char ConsoleMenu::readValidInput(char _tabValidInput[], int _nbElements)
 				return _tabValidInput[i];
 			}
 		}
-		cout << "Veuillez entrer une donn�e valide." << endl;
+		cout << "Veuillez entrer une donnée valide." << endl;
 	}
 }
 
+/**
+	displayMenu permet d'afficher le menu principale avec les actions permises.
+*/
 void ConsoleMenu::displayMenu()
 {
-	cout << "Entrez �V� pour visualiser le Labyrinthe, �S� pour solutionner le Labyrinthe ou �Q� pour quitter : ";
+	cout << "Entrez «V» pour visualiser le Labyrinthe, «S» pour solutionner le Labyrinthe ou «Q» pour quitter : ";
 }
 
+/**
+	manageChoice fait les actions appropriées basées sur l'entré de l'utilisateur.
+	@param _input Un entré valide.
+	@return true si le programme doit continuer, false si il faut quitter.
+*/
 bool ConsoleMenu::manageChoice(char _input)
 {
 	Labyrinth lab("exemple1.txt");

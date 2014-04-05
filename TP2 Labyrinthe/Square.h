@@ -1,4 +1,13 @@
-#pragma once
+﻿#pragma once
+
+/** @file Square.h
+	Contient la définition de la structure Square.
+
+	@date 4 avril 2014
+	@author Gabriel Frenette-Lareault
+	@author Jean-David Moisan
+	@version 1.0
+*/
 
 struct Square 
 {

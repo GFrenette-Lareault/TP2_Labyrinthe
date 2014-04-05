@@ -1,26 +1,55 @@
-#include "robot.h"
+﻿#include "robot.h"
 
+/** @file Robot.cpp
+	Fichier responsable de résoudre le labyrinth.
+
+	@author Jean-David Moisan
+	@author Gabriel Frenette-Lareault
+	@date 4 avril 2014
+	@version 1.0
+ */
+
+/**
+	Constructeur, initialize un nouveau stack.
+*/
 Robot::Robot()
 {
 	pathStartToExit = new Stack();
 }
 
+/**
+	Déconstructeur, détruit la référence vers le stack.
+*/
 Robot::~Robot()
 {
 	delete pathStartToExit;
 }
 
+/**
+	Explore lance la recherche vers la sortie du labyrinth.
+	@param _labyrinth Le labyrinth.
+*/
 void Robot::Explore(Labyrinth* _labyrinth)
 {
 	currentSquare = _labyrinth->GetStartSquare();
 	searchPath(currentSquare, _labyrinth);
 }
 
+/**
+	getSolution retourne la liste des cases jusqu'à la sortie.
+	@return Un string contenant le chemin jusqu'à la sortie.
+*/
 string Robot::getSolution()
 {
 	return pathStartToExit->ToStringReverse();
 }
 
+/**
+	findUnvisited est une fonction récursive qui permet de trouver une case encore non explorée
+	à partir d'une case donnée.
+	@param fromSquare La case qui doit être examinée.
+	@param _labyrinth Le labyrinth à explorer.
+*/
 Square* Robot::findUnvisited(Square* fromSquare, Labyrinth* _labyrinth)
 {
 	Square* unvisitedSquare;
@@ -48,6 +77,11 @@ Square* Robot::findUnvisited(Square* fromSquare, Labyrinth* _labyrinth)
 	return unvisitedSquare;
 }
 
+/**
+	searchPath est une fonction récursive qui permet de trouver un chemin jusqu'à la sortie.
+	@param fromSquare La case qui doit être examinée.
+	@param _labyrinth Le labyrinth à explorer.
+*/
 bool Robot::searchPath(Square* fromSquare, Labyrinth* _labyrinth)
 {
 	if (fromSquare->value != 'S')
