@@ -21,7 +21,7 @@ void ConsoleMenu::setPosition(int x, int y, int time)
 {
    try
    {
-      Console::SetCursorPosition(x, y + 3);
+      Console::SetCursorPosition(x, y);
 	_sleep(time);
    }
    catch (ArgumentOutOfRangeException^ e) 
@@ -138,6 +138,7 @@ bool ConsoleMenu::manageChoice(char _input)
 		case 'V':
 		case 'v':
 		{
+			system("cls");
 			cout << lab.ToString();
 			system("pause");
 			return true;
@@ -145,10 +146,9 @@ bool ConsoleMenu::manageChoice(char _input)
 		case 'S':
 		case 's':
 		{
+			system("cls");
 			Robot rob;
 			rob.Explore(&lab);
-
-			cout << endl;
 
 			cout << lab.ToString();
 
